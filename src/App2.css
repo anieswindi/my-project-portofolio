@@ -1,0 +1,24 @@
+#navbar_my_style {
+    background-color: #f7f7fa;
+    justify-content: center;
+    display: flex;
+    height: 8vh;
+}
+
+.a_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.a_center_pic {
+    width: 20%;
+    background: chocolate;
+}
+
+.a {
+    background: chartreuse;
+    width: 30%;
+    height: 100%;
+}
