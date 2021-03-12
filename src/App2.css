@@ -3,6 +3,19 @@
     justify-content: center;
     display: flex;
     height: 8vh;
+    -webkit-animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.navbar {
+    padding-top: 60px;
 }
 
 .a_row {
