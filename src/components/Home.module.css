@@ -12,6 +12,11 @@
     position: relative;
 }
 
+.customDiv {
+    position: relative;
+    z-index: -1;
+}
+
 .b_a {
     background: palevioletred;
     height: 100%;
@@ -33,7 +38,7 @@
 }
 
 .a {
-    background: #789d9bf7;
+    background: #3860d682;
     width: 20vw;
     height: auto;
     display: flex;
@@ -70,7 +75,7 @@
 .a_c_a {
     width: 40%;
     height: 50px;
-    background: #214a46;
+    background: #3860d6ad;
     border-radius: 30px;
     justify-content: center;
     display: flex;

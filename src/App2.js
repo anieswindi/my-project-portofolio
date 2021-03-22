@@ -58,13 +58,19 @@ export default class App2 extends Component {
       return (
         <div className="flex_row">
           <div className="row_1">
-            <h1>Simple App that we </h1>
-            <em>CREATE</em>
+            <h1>
+              Simple App that we <em>CREATE</em>
+            </h1>
+
             <p>
               Lava HTML landing page template is provided by TemplateMo.You can
               modify and use it for your commercial websites for free of charge.
               Nam maximus ex diam, nec consectetur diam.
             </p>
+
+            <button className="buttonUs">
+              <p>Know me better</p>
+            </button>
           </div>
           <img src={el.source} alt="" />
         </div>
