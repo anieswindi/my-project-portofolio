@@ -4,7 +4,13 @@ import { Slide } from "react-awesome-reveal";
 import analysis from "./../assets/047-growth.png";
 import optimation from "./../assets/036-tutorial.png";
 import emails from "./../assets/015-list.png";
+import styled from "styled-components";
 
+const CustomDiv = styled.div`
+  position: relative;
+  z-index: -1;
+  box-shadow: 0px 3px 6px #00000029;
+`;
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -60,13 +66,20 @@ export default class Home extends Component {
       );
     });
     return (
-      <div className="container">
-        <div className={cs.section}>
-          <Slide triggerOnce direction="up" duration={1000}>
+      //   <div className={["container", cs.custom].join(" ")}>
+      <CustomDiv>
+        <div className={cs.section_one}>
+          <div className={cs.b_a}>test</div>
+          <div className={cs.b_b}>test2</div>
+        </div>
+        <div className={cs.section_two}>
+          <Slide triggerOnce direction="up" duration={1000} delay={50}>
             {cards}
           </Slide>
         </div>
-      </div>
+      </CustomDiv>
+
+      //   </div>
     );
   }
 }

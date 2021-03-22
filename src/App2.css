@@ -1,10 +1,22 @@
 #navbar_my_style {
-    background-color: #f7f7fa;
+    background-color: rgba(255, 255, 255, 0.95);
     justify-content: center;
     display: flex;
     height: 8vh;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 25%);
     -webkit-animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 

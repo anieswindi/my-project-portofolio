@@ -1,14 +1,39 @@
-.section {
+.custom {
+    display: flex;
+    flex-direction: column;
+}
+
+.section_one {
+    width: 100vw;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #f1f1f1;
+    position: relative;
+}
+
+.b_a {
+    background: palevioletred;
+    height: 100%;
+}
+
+.b_b {
+    background: plum;
+    height: 100%;
+}
+
+.section_two {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 4rem;
+    position: relative;
 }
 
 .a {
-    background: #e4a172;
+    background: #789d9bf7;
     width: 20vw;
     height: auto;
     display: flex;
@@ -38,7 +63,6 @@
 
 .a_c {
     margin-top: 2rem;
-
     display: flex;
     justify-content: center;
 }
@@ -46,7 +70,7 @@
 .a_c_a {
     width: 40%;
     height: 50px;
-    background: coral;
+    background: #214a46;
     border-radius: 30px;
     justify-content: center;
     display: flex;

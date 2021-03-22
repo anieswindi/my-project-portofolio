@@ -5,11 +5,7 @@ import UseScrollPosition from "@react-hook/window-scroll";
 import "./navbar.css";
 
 export default function navbar(props) {
-  const ScrollY = UseScrollPosition(10);
-
-  window.onscroll = function () {
-    scrollWdw();
-  };
+  const ScrollY = UseScrollPosition(0);
 
   const navbar = props.data.map((el) => {
     return (
@@ -29,30 +25,35 @@ export default function navbar(props) {
   });
 
   let sticky;
-
-  const scrollWdw = () => {
-    if (ScrollY >= "60") {
+  console.log(window.screen);
+  const w = window.screen.width;
+  if (w <= 1440) {
+    if (ScrollY >= "954") {
       sticky = "sticky";
     } else {
       sticky = "";
     }
-  };
+  } else {
+    if (ScrollY >= "1166") {
+      sticky = "sticky";
+    } else {
+      sticky = "";
+    }
+  }
 
   return (
-    <div>
-      <Navbar id="navbar_my_style" className={["navbar", sticky].join(" ")}>
-        <Navbar.Body>
-          <Nav>
-            <Link to="/">
-              <Nav.Item icon={<Icon icon="home" />}>Home</Nav.Item>
-            </Link>
-            {navbar}
-          </Nav>
-          <Nav pullRight>
-            <Nav.Item icon={<Icon icon="cog" />}>Settings</Nav.Item>
-          </Nav>
-        </Navbar.Body>
-      </Navbar>
-    </div>
+    <Navbar id="navbar_my_style" className={["navbar", sticky].join(" ")}>
+      <Navbar.Body>
+        <Nav>
+          <Link to="/">
+            <Nav.Item icon={<Icon icon="home" />}>Home</Nav.Item>
+          </Link>
+          {navbar}
+        </Nav>
+        <Nav pullRight>
+          <Nav.Item icon={<Icon icon="cog" />}>Settings</Nav.Item>
+        </Nav>
+      </Navbar.Body>
+    </Navbar>
   );
 }

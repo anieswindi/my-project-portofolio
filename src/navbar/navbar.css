@@ -1,6 +1,9 @@
 #navbar_my_style {
     background-color: #f7f7fa;
     justify-content: center;
+    overflow: hidden;
+    /* overflow: hidden;
+    position: fixed; */
     display: flex;
     height: 8vh;
     -webkit-animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -13,25 +16,6 @@
     width: 100%;
 }
 
-
-/* .sticky {
-    position: fixed;
-    
-    top: calc(20px);
-    z-index: 100;
-    margin-bottom: 60px;
-    margin-left: 50px;
-    padding: 0;
-    height: 56px;
-    width: 100vw;
-    background-color: #f1f1f1;
-    -webkit-animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-} */
-
-.sticky+.navbar {
-    padding-top: 60px;
-}
 
 .a_row {
     display: flex;
