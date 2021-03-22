@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 import Context from "./Context";
 import "./App2.css";
 import Navbar from "./navbar/navbar";
-import wall from "./assets/wallpaper_after_crop.jpg";
+import wall from "./assets/mobile-app-development.png";
 import Helmet from "react-helmet";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
@@ -33,38 +33,61 @@ export default class App2 extends Component {
           name: "Contact",
         },
       ],
+      data_slide: [
+        {
+          id: 0,
+          name: "About",
+          source: wall,
+        },
+        {
+          id: 1,
+          name: "Experience",
+          source: wall,
+        },
+        {
+          id: 2,
+          name: "Contact",
+          source: wall,
+        },
+      ],
     };
   }
 
   render() {
+    const data_slide = this.state.data_slide.map((el) => {
+      return (
+        <div className="flex_row">
+          <div className="row_1">
+            <h1>Simple App that we </h1>
+            <em>CREATE</em>
+            <p>
+              Lava HTML landing page template is provided by TemplateMo.You can
+              modify and use it for your commercial websites for free of charge.
+              Nam maximus ex diam, nec consectetur diam.
+            </p>
+          </div>
+          <img src={el.source} alt="" />
+        </div>
+      );
+    });
+
     const AutoplaySlider = withAutoplay(AwesomeSlider);
-    const slider = (
-      <AutoplaySlider
-        animation="cubeAnimation"
-        play={true}
-        cancelOnInteraction={false} // should stop playing on user interaction
-        interval={6000}
-      >
-        <div>
-          <img src={wall} alt="" />
-        </div>
-        <div>
-          <img src={wall} alt="" />
-        </div>
-        <div>
-          <img src={wall} alt="" />
-        </div>
-        <div>
-          <img src={wall} alt="" />
-        </div>
-      </AutoplaySlider>
-    );
 
     return (
       <Context.Provider value={this.state}>
         <Helmet title={this.state.title_page} />
         <Router>
-          <div className="images">{slider}</div>
+          <div id="slider_top">
+            <AutoplaySlider
+              animation="cubeAnimation"
+              play={true}
+              cancelOnInteraction={false} // should stop playing on user interaction
+              interval={6000}
+              className="customClass"
+            >
+              {data_slide}
+            </AutoplaySlider>
+          </div>
           <Navbar data={this.state.items} />
           <Switch>
             <Route path="/About">

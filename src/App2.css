@@ -8,15 +8,57 @@
     animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.images {
-    width: 100%;
-    height: 100%;
+
+
+#slider_top .awssld__content {
+    background-color: white !important;
 }
 
-.images img {
+
+
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
     width: 100%;
+}
+
+.row_1 {
+    height: 100%;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 11rem 2rem 11rem 17rem;
+}
+
+.flex_row img {
+    width: 50%;
     height: 100%;
     object-fit: cover;
+    padding: 5rem;
+}
+
+.row_1 h1 {
+    font-weight: 900;
+    font-family: 'Poppins';
+    font-size: 52px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #191a20;
+}
+
+
+.row_1 em {
+    color: #fba70b;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 
 
