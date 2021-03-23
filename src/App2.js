@@ -91,7 +91,6 @@ export default class App2 extends Component {
           <div id="slider_top">
             <AutoplaySlider
               animation="cubeAnimation"
-              play={true}
               cancelOnInteraction={false} // should stop playing on user interaction
               interval={6000}
               className="customClass"

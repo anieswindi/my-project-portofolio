@@ -42,7 +42,7 @@ export default function navbar(props) {
     <Navbar id="navbar_my_style" className={["navbar", sticky].join(" ")}>
       <div className="wrapper">
         <div className="left">
-          <p>ANIES</p>
+          <p>ANIES WINDIARTI</p>
         </div>
         <div className="right">
           <div className="halfRight">{navbar}</div>
