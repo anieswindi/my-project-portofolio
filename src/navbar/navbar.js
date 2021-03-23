@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Icon } from "rsuite";
+import { Navbar } from "rsuite";
 import { Link } from "react-router-dom";
 import UseScrollPosition from "@react-hook/window-scroll";
 import "./navbar.css";
@@ -9,23 +9,20 @@ export default function navbar(props) {
 
   const navbar = props.data.map((el) => {
     return (
-      <Link to={`/${el.name}`} key={el.id}>
-        <Nav.Item>
-          <span
-            style={{
-              fontFamily: "Roboto Condensed",
-              fontSize: "30px",
-            }}
-          >
-            {el.name}
-          </span>
-        </Nav.Item>
+      <Link to={`/${el.name}`} key={el.id} className="navItem">
+        <span
+          style={{
+            fontFamily: "Roboto Condensed",
+            fontSize: "30px",
+          }}
+        >
+          {el.name}
+        </span>
       </Link>
     );
   });
 
   let sticky;
-  console.log(window.screen);
   const w = window.screen.width;
   if (w <= 1440) {
     if (ScrollY >= "954") {
@@ -34,7 +31,7 @@ export default function navbar(props) {
       sticky = "";
     }
   } else {
-    if (ScrollY >= "1166") {
+    if (ScrollY >= "1165") {
       sticky = "sticky";
     } else {
       sticky = "";
@@ -43,17 +40,14 @@ export default function navbar(props) {
 
   return (
     <Navbar id="navbar_my_style" className={["navbar", sticky].join(" ")}>
-      <Navbar.Body>
-        <Nav>
-          <Link to="/">
-            <Nav.Item icon={<Icon icon="home" />}>Home</Nav.Item>
-          </Link>
-          {navbar}
-        </Nav>
-        <Nav pullRight>
-          <Nav.Item icon={<Icon icon="cog" />}>Settings</Nav.Item>
-        </Nav>
-      </Navbar.Body>
+      <div className="wrapper">
+        <div className="left">
+          <p>ANIES</p>
+        </div>
+        <div className="right">
+          <div className="halfRight">{navbar}</div>
+        </div>
+      </div>
     </Navbar>
   );
 }

@@ -20,17 +20,22 @@ export default class App2 extends Component {
     this.state = {
       title_page: "My App",
       items: [
+        { id: 0, name: "Home" },
         {
-          id: 0,
+          id: 1,
           name: "About",
         },
         {
-          id: 1,
+          id: 2,
           name: "Experience",
         },
         {
-          id: 2,
+          id: 3,
           name: "Contact",
+        },
+        {
+          id: 4,
+          name: "Info",
         },
       ],
       data_slide: [

@@ -1,5 +1,5 @@
 #navbar_my_style {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.95) !important;
     justify-content: center;
     display: flex;
     height: 12vh;
@@ -15,7 +15,7 @@
 }
 
 #slider_top .awssld__bullets {
-    bottom: 80px;
+    bottom: 170px;
 }
 
 
@@ -32,14 +32,14 @@
     width: 50%;
     flex-direction: column;
     justify-content: center;
-    padding: 11rem 12rem 11rem 17rem;
+    padding: 3rem 12rem 11rem 17rem;
 }
 
 .flex_row img {
     width: 50%;
     height: 100%;
     object-fit: cover;
-    padding: 9rem 9rem 9rem 2rem;
+    padding: 3rem 9rem 9rem 2rem;
 }
 
 .row_1 h1 {
