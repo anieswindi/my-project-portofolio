@@ -7,6 +7,9 @@ import emails from "./../assets/015-list.png";
 import config from "./../config/config";
 import ava from "./../assets/ava.jpg";
 import tw from "./../assets/s.png";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
 // import axios from "axios";
 
 export default class Home extends Component {
@@ -41,6 +44,13 @@ export default class Home extends Component {
         },
       ],
       dataAll: [],
+      capabilities: [
+        { id: 0, val: 80, text: "Js" },
+        { id: 1, val: 80, text: "CSS" },
+        { id: 2, val: 80, text: "HTML" },
+        { id: 3, val: 60, text: "Development" },
+        { id: 4, val: 60, text: "Design" },
+      ],
     };
     this.getDataAll = this.getDataAll.bind(this);
   }
@@ -101,6 +111,17 @@ export default class Home extends Component {
         );
       }
       return <>{res}</>;
+    });
+
+    let progresBar = this.state.capabilities.map((el) => {
+      return (
+        <div className={cs.m}>
+          <p>{el.text}</p>
+          <div className={cs.l}>
+            <CircularProgressbar value={el.val} text={`${el.val}%`} />
+          </div>
+        </div>
+      );
     });
 
     return (
@@ -220,6 +241,22 @@ export default class Home extends Component {
               laboris. Lorem ipsum Enim proident et eu et minim voluptate
               eiusmod ullamco commodo aliqua amet.
             </p>
+            <div className={cs.wrapProgress}>{progresBar}</div>
+          </div>
+        </div>
+
+        <div className={["container", cs.customCs3].join(" ")}>
+          <div className={cs.j}>
+            <p className={cs.k}>CONTACT</p>
+            <p className={cs.k1}>
+              Lorem ipsum Cupidatat sit irure nostrud ut deserunt ad enim id
+              laboris. Lorem ipsum Enim proident et eu et minim voluptate
+              eiusmod ullamco commodo aliqua amet.
+            </p>
+            <div className={cs.wrapProgress2}>
+              <div className={cs.u}>test</div>
+              <div className={cs.v}>test2</div>
+            </div>
           </div>
         </div>
       </div>
