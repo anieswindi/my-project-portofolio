@@ -27,15 +27,19 @@ export default class App2 extends Component {
         },
         {
           id: 2,
-          name: "Experience",
+          name: "Project",
         },
         {
           id: 3,
-          name: "Contact",
+          name: "Info",
         },
         {
           id: 4,
-          name: "Info",
+          name: "Capabilities",
+        },
+        {
+          id: 5,
+          name: "Contact",
         },
       ],
       data_slide: [
