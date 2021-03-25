@@ -14,6 +14,31 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
+import { createGlobalStyle } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./theme/theme";
+
+const GlobalStyles = createGlobalStyle`
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  body {
+    align-items: center;
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    transition: all 0.25s linear;
+  }`;
+
 export default class App2 extends Component {
   constructor(props) {
     super(props);
@@ -59,7 +84,21 @@ export default class App2 extends Component {
           source: wall,
         },
       ],
+      isChecked: false,
     };
+    this.onChangeHandle = this.onChangeHandle.bind(this);
+  }
+
+  onChangeHandle() {
+    this.setState({
+      isChecked: !this.state.isChecked,
+    });
+
+    if (this.state.isChecked) {
+      localStorage.setItem("theme", "lightMode");
+    } else {
+      localStorage.setItem("theme", "darkMode");
+    }
   }
 
   render() {
@@ -90,34 +129,41 @@ export default class App2 extends Component {
 
     return (
       <Context.Provider value={this.state}>
-        <Helmet title={this.state.title_page} />
-        <Router>
-          <div id="slider_top">
-            <AutoplaySlider
-              animation="cubeAnimation"
-              cancelOnInteraction={false} // should stop playing on user interaction
-              interval={6000}
-              className="customClass"
-            >
-              {data_slide}
-            </AutoplaySlider>
-          </div>
-          <Navbar data={this.state.items} />
-          <Switch>
-            <Route path="/About">
-              <About />
-            </Route>
-            <Route path="/Experience">
-              <Experience />
-            </Route>
-            <Route path="/Contact">
-              <Contact />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </Router>
+        <ThemeProvider theme={this.state.isChecked ? darkTheme : lightTheme}>
+          <GlobalStyles />
+          <Helmet title={this.state.title_page} />
+          <Router>
+            <div id="slider_top">
+              <AutoplaySlider
+                animation="cubeAnimation"
+                cancelOnInteraction={false} // should stop playing on user interaction
+                interval={6000}
+                className="customClass"
+              >
+                {data_slide}
+              </AutoplaySlider>
+            </div>
+            <Navbar
+              data={this.state.items}
+              isChecked={this.state.isChecked}
+              onChange={this.onChangeHandle}
+            />
+            <Switch>
+              <Route path="/About">
+                <About />
+              </Route>
+              <Route path="/Experience">
+                <Experience />
+              </Route>
+              <Route path="/Contact">
+                <Contact />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Router>
+        </ThemeProvider>
       </Context.Provider>
     );
   }

@@ -3,6 +3,7 @@ import { Navbar } from "rsuite";
 import { Link } from "react-router-dom";
 import UseScrollPosition from "@react-hook/window-scroll";
 import "./navbar.css";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 export default function navbar(props) {
   const ScrollY = UseScrollPosition(0);
@@ -46,6 +47,13 @@ export default function navbar(props) {
         </div>
         <div className="right">
           <div className="halfRight">{navbar}</div>
+        </div>
+        <div className="switch">
+          <DarkModeToggle
+            onChange={props.onChange}
+            checked={props.isChecked}
+            size={70}
+          />
         </div>
       </div>
     </Navbar>

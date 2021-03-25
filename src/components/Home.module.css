@@ -22,6 +22,20 @@
     margin: 1rem 0;
 }
 
+.isDark span {
+    color: white !important;
+}
+
+.isDark .p::after {
+    content: "";
+    display: block;
+    background-color: #fff !important;
+    width: 10%;
+    height: 1px;
+    margin: 15px auto 0;
+}
+
+
 .section_one .p::after {
     content: "";
     display: block;
@@ -29,6 +43,15 @@
     width: 10%;
     height: 1px;
     margin: 15px auto 0;
+}
+
+.darkCard {
+    background: #b2b4b854 !important;
+    box-shadow: 1px 11px 13px -3px rgb(236 231 231 / 47%) !important;
+}
+
+.darkCard h1 {
+    color: #fff !important;
 }
 
 
@@ -55,13 +78,16 @@
     font-family: 'Poppins';
     font-size: 52px;
     letter-spacing: 1px;
-    color: white;
+    color: white !important;
     text-align: center;
     margin: 1rem 0;
 }
 
+
+
+
 .k span {
-    color: #3838d6;
+    color: #3838d6 !important;
     font-weight: bold;
     font-family: 'Poppins';
     font-size: 52px;
@@ -75,7 +101,7 @@
     font-size: 18px;
     line-height: 32px;
     letter-spacing: 1px;
-    color: white;
+    color: white !important;
     text-align: center;
 }
 
@@ -84,7 +110,7 @@
     font-size: 18px;
     line-height: 32px;
     letter-spacing: 1px;
-    color: #191a20;
+    color: #191a20 !important;
     text-align: center;
 }
 
@@ -146,7 +172,7 @@
 .r {
     width: 25%;
     height: 100%;
-    background: #575757;
+    background: #575757 !important;
     overflow: hidden;
 
 }
@@ -183,6 +209,10 @@
     text-align: center;
 }
 
+.isDark h1 {
+    color: white !important;
+}
+
 .a_b {
     margin-top: 2rem;
 }
@@ -193,6 +223,14 @@
     font-size: 18px;
     text-align: justify;
 }
+
+
+.isDark p {
+    color: white !important;
+}
+
+
+
 
 .a_c {
     margin-top: 2rem;
@@ -211,7 +249,7 @@
 
 .a_c_a p {
     margin: auto;
-    color: white;
+    color: white !important;
     font-family: "Roboto Condensed";
 }
 
@@ -321,6 +359,7 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    background: white;
 }
 
 .customCs2 {
@@ -343,7 +382,7 @@
     line-height: 32px;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: white;
+    color: white !important;
 }
 
 .m {
@@ -386,10 +425,32 @@
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+
 }
 
-.v {
-    width: 50%;
-    height: 100%;
-    background: blueviolet;
+.v1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+
+.v1 p {
+    color: #3838d6;
+    margin: auto 1rem auto 1rem;
+    justify-content: center;
+    display: flex;
+}
+
+.u img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.u a {
+    display: flex;
 }
