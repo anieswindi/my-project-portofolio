@@ -91,7 +91,7 @@ export default class Home extends Component {
       contact: [
         {
           id: 0,
-          account: "anieswindirti@gmail.com",
+          account: "anieswindiarti@gmail.com",
           src: letter,
           link: "mailto:anieswindiarti@gmail.com",
         },
@@ -253,6 +253,15 @@ export default class Home extends Component {
         </div>
       );
     });
+    let inspired_by = (
+      <div className={cs.w}>
+        Insipred by : &nbsp;
+        <p>https://www.free-css.com/free-css-templates/page264/lava</p>, &nbsp;
+        <span>https://www.free-css.com/free-css-templates/page264/daraz</span>,
+        &nbsp;
+        <p>https://www.freepik.com/</p>
+      </div>
+    );
 
     let contact = (
       <div className={["container", cs.customCs3].join(" ")}>
@@ -266,6 +275,7 @@ export default class Home extends Component {
           <div className={cs.wrapProgress2}>
             <div className={cs.u}>{contacts}</div>
           </div>
+          {inspired_by}
         </div>
       </div>
     );
