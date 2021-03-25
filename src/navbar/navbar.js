@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "rsuite";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import UseScrollPosition from "@react-hook/window-scroll";
 import "./navbar.css";
 import DarkModeToggle from "react-dark-mode-toggle";
@@ -9,8 +9,13 @@ export default function navbar(props) {
   const ScrollY = UseScrollPosition(0);
 
   const navbar = props.data.map((el) => {
+    console.log(el);
     return (
-      <Link to={`/${el.name}`} key={el.id} className="navItem">
+      <div
+        key={el.id}
+        className="navItem"
+        onClick={() => props.scroll(el.name)}
+      >
         <span
           style={{
             fontFamily: "Roboto Condensed",
@@ -19,7 +24,7 @@ export default function navbar(props) {
         >
           {el.name}
         </span>
-      </Link>
+      </div>
     );
   });
 
