@@ -7,7 +7,7 @@ import emails from "./../assets/015-list.png";
 import config from "./../config/config";
 import ava from "./../assets/ava.jpg";
 import tw from "./../assets/s.png";
-import igs from "./../assets/igs2.jpg";
+import git from "./../assets/git.jpg";
 import twt from "./../assets/twt2.png";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -15,7 +15,6 @@ import letter from "../assets/letter.png";
 import pin from "../assets/pin.png";
 import call from "../assets/call.png";
 // import { Link } from "react-router-dom";
-
 // import axios from "axios";
 
 export default class Home extends Component {
@@ -66,14 +65,16 @@ export default class Home extends Component {
           title: "Anies Windiarti",
           src: tw,
           ava: ava,
+          link: "https://www.linkedin.com/in/anies-windiarti/",
           content:
             "Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.",
         },
         {
           id: 1,
-          title: "@kemaniesan",
-          src: igs,
+          title: "@windiarties",
+          src: git,
           ava: ava,
+          link: "https://github.com/windiarties/my-project-portofolio",
           content:
             "Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.",
         },
@@ -82,6 +83,7 @@ export default class Home extends Component {
           title: "@anieswindi",
           src: twt,
           ava: ava,
+          link: "https://twitter.com/anieswindi",
           content:
             "Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.",
         },
@@ -213,9 +215,11 @@ export default class Home extends Component {
               <h1>{el.title}</h1>
               <p>{el.content}</p>
               <div className={cs.t1ab}>
-                <div className={cs.t1abb}>
-                  <img src={el.src} alt="" />
-                </div>
+                <a href={el.link} rel="noopener noreferrer">
+                  <div className={cs.t1abb}>
+                    <img src={el.src} alt="" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
