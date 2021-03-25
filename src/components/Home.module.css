@@ -229,6 +229,10 @@
     color: white !important;
 }
 
+.isDark .v1 p {
+    color: black !important;
+}
+
 
 
 
@@ -439,7 +443,7 @@
 
 
 .v1 p {
-    color: #3838d6;
+    color: #008ED6;
     margin: auto 1rem auto 1rem;
     justify-content: center;
     display: flex;
