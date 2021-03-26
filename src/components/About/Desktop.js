@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Helmet from "react-helmet";
 import cs from "./About.module.css";
 import { Slide } from "react-awesome-reveal";
-import analysis from "./../assets/047-growth.png";
-import optimation from "./../assets/036-tutorial.png";
-import emails from "./../assets/015-list.png";
+import analysis from "./../../assets/047-growth.png";
+import optimation from "./../../assets/036-tutorial.png";
+import emails from "./../../assets/015-list.png";
 import "react-circular-progressbar/dist/styles.css";
 
 export default class About extends Component {

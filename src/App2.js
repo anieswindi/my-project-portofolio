@@ -1,21 +1,14 @@
 import React, { Component, createRef } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "rsuite/dist/styles/rsuite-default.css";
-// import Home from "./components/Home";
-import About from "./components/About";
-import Project from "./components/Project";
-import Contact from "./components/Contact";
-import Info from "./components/Info";
-import Capabilities from "./components/Capabilities";
 import Context from "./Context";
 import "./App2.css";
-// import Navbar from "./navbar/navbar";
 import wall from "./assets/mobile-app-development.png";
 import Helmet from "react-helmet";
-import AwesomeSlider from "react-awesome-slider";
+// import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
+// import withAutoplay from "react-awesome-slider/dist/autoplay";
 import { createGlobalStyle } from "styled-components";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/theme";
@@ -24,6 +17,12 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { Navbar } from "rsuite";
 import "./navbar/navbar.css";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Project from "./components/Project/Project";
+import Contact from "./components/Contact/Contact";
+import Info from "./components/Info/Info";
+import Capabilities from "./components/Capabilities/Capabilities";
 
 const GlobalStyles = createGlobalStyle`
   *,
@@ -202,30 +201,6 @@ class App2 extends Component {
   }
 
   render() {
-    const data_slide = this.state.data_slide.map((el) => {
-      return (
-        <div className="flex_row">
-          <div className="row_1">
-            <h1>
-              Simple App that we <em>CREATE</em>
-            </h1>
-
-            <p>
-              Lava HTML landing page template is provided by TemplateMo.You can
-              modify and use it for your commercial websites for free of charge.
-              Nam maximus ex diam, nec consectetur diam.
-            </p>
-
-            <button className="buttonUs">
-              <p>Know me better</p>
-            </button>
-          </div>
-          <img src={el.source} alt="" />
-        </div>
-      );
-    });
-
-    const AutoplaySlider = withAutoplay(AwesomeSlider);
     let sticky;
     const w = window.screen.width;
     const y = window.scrollY;
@@ -269,7 +244,7 @@ class App2 extends Component {
           <GlobalStyles />
           <Helmet title={this.state.title_page} />
           <Router>
-            <div id="slider_top" ref={this.section1}>
+            {/* <div id="slider_top" ref={this.section1}>
               <AutoplaySlider
                 animation="cubeAnimation"
                 cancelOnInteraction={false} // should stop playing on user interaction
@@ -278,48 +253,34 @@ class App2 extends Component {
               >
                 {data_slide}
               </AutoplaySlider>
-            </div>
-
-            <Navbar
-              id="navbar_my_style"
-              className={["navbar", sticky].join(" ")}
-            >
-              <div className="wrapper">
-                <div className="left">
-                  <p>ANIES WINDIARTI</p>
-                </div>
-                <div className="right">
-                  <div className="halfRight">{navbar}</div>
-                </div>
-                <div className="switch">
-                  <DarkModeToggle
-                    onChange={this.onChangeHandle}
-                    checked={this.state.isChecked}
-                    size={70}
-                  />
-                </div>
-              </div>
-            </Navbar>
-            {/* <Navbar
-              data={this.state.items}
-              isChecked={this.state.isChecked}
-              onChange={this.onChangeHandle}
-              scroll={this.scrolltoSectionHandler}
-            /> */}
-            {/* <Route path="/About">
-                <About />
-              </Route>
-              <Route path="/Experience">
-                <Experience />
-              </Route>
-              <Route path="/Contact">
-                <Contact />
-              </Route> */}
+            </div> */}
             <ParallaxProvider>
               <React.Fragment>
-                {/* <div ref={this.section1}>
+                <div ref={this.section1}>
                   <Home />
-                </div> */}
+                </div>
+
+                <Navbar
+                  id="navbar_my_style"
+                  className={["navbar", sticky].join(" ")}
+                >
+                  <div className="wrapper">
+                    <div className="left">
+                      <p>ANIES WINDIARTI</p>
+                    </div>
+                    <div className="right">
+                      <div className="halfRight">{navbar}</div>
+                    </div>
+                    <div className="switch">
+                      <DarkModeToggle
+                        onChange={this.onChangeHandle}
+                        checked={this.state.isChecked}
+                        size={70}
+                      />
+                    </div>
+                  </div>
+                </Navbar>
+
                 <div ref={this.section2}>
                   <About />
                 </div>

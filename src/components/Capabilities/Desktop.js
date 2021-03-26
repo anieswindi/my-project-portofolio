@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import cs from "./Home.module.css";
+import cs from "./Capabilities.module.css";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 

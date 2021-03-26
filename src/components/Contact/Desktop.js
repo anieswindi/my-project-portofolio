@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import cs from "./Contact.module.css";
-import letter from "../assets/letter.png";
-import pin from "../assets/pin.png";
-import call from "../assets/call.png";
+import letter from "../../assets/letter.png";
+import pin from "../../assets/pin.png";
+import call from "../../assets/call.png";
 export default class Contact extends Component {
   constructor(props) {
     super(props);

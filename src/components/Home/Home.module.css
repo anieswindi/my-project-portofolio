@@ -1,3 +1,119 @@
+#navbar_my_style {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    justify-content: center;
+    display: flex;
+    height: 12vh;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 25%);
+    -webkit-animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+
+
+#slider_top .awssld__content {
+    background-color: white !important;
+}
+
+#slider_top .awssld__bullets {
+    bottom: 170px;
+}
+
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.row_1 {
+    height: 100%;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 12rem 11rem 17rem;
+}
+
+.flex_row img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    padding: 3rem 9rem 9rem 2rem;
+}
+
+.row_1 h1 {
+    font-weight: 900;
+    font-family: 'Poppins';
+    font-size: 52px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #191a20;
+}
+
+
+.row_1 em {
+    /* color: #fba70b; */
+    color: #3838d6;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 74px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.row_1 p {
+    font-family: 'Poppins';
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #191a20;
+}
+
+.buttonUs {
+    margin-top: 3rem;
+    background: #3838d6;
+    border-radius: 30px;
+    height: 42px;
+}
+
+.buttonUs p {
+    color: white;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.navbar {
+    padding-top: 60px;
+}
+
+.a_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.a_center_pic {
+    width: 20%;
+    background: chocolate;
+}
+
+.a {
+    background: chartreuse;
+    width: 30%;
+    height: 100%;
+}
+
+
+
 .custom {
     display: flex;
     flex-direction: column;

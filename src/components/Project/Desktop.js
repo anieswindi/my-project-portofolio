@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import cs from "./Project.module.css";
-import config from "./../config/config";
+import config from "./../../config/config";
 
 export default class Project extends Component {
   constructor(props) {
