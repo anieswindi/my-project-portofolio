@@ -4,7 +4,6 @@ import ava from "./../assets/ava.jpg";
 import tw from "./../assets/s.png";
 import git from "./../assets/git.jpg";
 import twt from "./../assets/twt2.png";
-
 export default class Info extends Component {
   constructor(props) {
     super(props);

@@ -84,8 +84,8 @@ export default class About extends Component {
     return (
       <div>
         {" "}
-        <Helmet title="About" />
-        <div className={cs.section_one}>
+        <Helmet title="Anies Windiarti" />
+        <div className={[cs.section_one, isDark].join(" ")}>
           <p className={cs.p}>
             ABOUT <span>ME</span>
           </p>

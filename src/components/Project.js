@@ -45,6 +45,7 @@ export default class Project extends Component {
     });
   }
   render() {
+    let isDark = this.state.isDark ? cs.isDark : "";
     let projectCards = this.state.dataAll.map((item, i) => {
       let res, url, site, title_project;
 
@@ -119,7 +120,7 @@ export default class Project extends Component {
     });
     return (
       <>
-        <div className={cs.section_one}>
+        <div className={[cs.section_one, isDark].join(" ")}>
           <p className={cs.p}>PROJECT</p>
           <p className={cs.p_1}>
             Lorem ipsum Cupidatat sit irure nostrud ut deserunt ad enim id
