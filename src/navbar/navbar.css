@@ -160,3 +160,22 @@
         opacity: 1;
     }
 }
+
+
+@media only screen and (max-width: 1441px) {
+    .left {
+        width: 20%;
+    }
+
+    .right {
+        width: 60%;
+    }
+
+    .switch {
+        width: 20%;
+    }
+
+    .halfRight {
+        justify-content: space-around;
+    }
+}

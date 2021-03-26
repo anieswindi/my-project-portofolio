@@ -111,3 +111,14 @@
     width: 30%;
     height: 100%;
 }
+
+
+@media only screen and (max-width: 1441px) {
+    .row_1 {
+        padding: 7rem 6rem 11rem 9rem
+    }
+
+    #slider_top .awssld__bullets {
+        bottom: 43px;
+    }
+}
