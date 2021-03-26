@@ -46,11 +46,38 @@ export default class Project extends Component {
   }
   render() {
     let projectCards = this.state.dataAll.map((item, i) => {
-      let res;
+      let res, url, site, title_project;
+
       if (i <= 3) {
+        if (i === 0) {
+          url = "/";
+          site = "intellsystem";
+          title_project = "Intelligence System";
+        } else if (i === 1) {
+          url = "/";
+          site = "ddexconverter";
+          title_project = "DDEX Converter";
+        } else if (i === 2) {
+          url = "/";
+          site = "ytscraping";
+          title_project = "Web Scraping";
+        } else {
+          url = "/";
+          site = " ";
+          title_project = " ";
+        }
         res = (
           <div className={cs.r}>
             <img src={item.i.imageUrl} alt="" />
+            <div className={cs.cd}>
+              <div className={cs.cg}></div>
+              <div className={cs.cff}>
+                <p>{title_project}</p>
+                <a rel="noopener noreferrer" href={url} target="_blank">
+                  <p>{site}</p>
+                </a>
+              </div>
+            </div>
           </div>
         );
       }
@@ -58,11 +85,33 @@ export default class Project extends Component {
     });
 
     let projectCardsTwo = this.state.dataAll.map((item, i) => {
-      let res;
+      let res, url, site, title_project;
       if (i > 3) {
+        if (i === 4) {
+          url = "https://www.phenikaa.com/";
+          site = "www.phenikaa.com";
+          title_project = "Phenikaa Website";
+        } else if (i === 5) {
+          url = "http://admin.phenikaa.com/";
+          site = "admin.phenikaa.com";
+          title_project = "Admin Phenikaa";
+        } else {
+          url = "/";
+          site = " ";
+          title_project = " ";
+        }
         res = (
           <div className={cs.r}>
             <img src={item.i.imageUrl} alt="" />
+            <div className={cs.cd}>
+              <div className={cs.cg}></div>
+              <div className={cs.cf}>
+                <p>{title_project}</p>
+                <a rel="noopener noreferrer" href={url} target="_blank">
+                  <p>{site}</p>
+                </a>
+              </div>
+            </div>
           </div>
         );
       }

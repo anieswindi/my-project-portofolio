@@ -279,7 +279,7 @@
 }
 
 .t {
-    width: 15%;
+    width: 25%;
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -311,7 +311,7 @@
     background: #F7F7F7;
     box-shadow: 0px 8px 6px -8px rgb(0 0 0 / 54%);
     height: 100%;
-    width: 50%;
+    width: 40%;
 }
 
 

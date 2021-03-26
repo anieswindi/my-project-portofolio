@@ -35,7 +35,7 @@ export default class Info extends Component {
           title: "@anieswindi",
           src: twt,
           ava: ava,
-          link: "https://twitter.com/anieswindi",
+          link: "https://twitter.com/",
           content:
             "Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.",
         },
