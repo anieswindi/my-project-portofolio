@@ -94,8 +94,8 @@ export default class Info extends Component {
             laboris. Lorem ipsum Enim proident et eu et minim voluptate eiusmod
             ullamco commodo aliqua amet.
           </p>
+          <div className={["container", cs.customCs].join(" ")}>{profile}</div>
         </div>
-        <div className={["container", cs.customCs].join(" ")}>{profile}</div>
       </div>
     );
   }
