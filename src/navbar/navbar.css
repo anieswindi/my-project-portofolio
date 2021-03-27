@@ -2,6 +2,7 @@
     background-color: #f7f7fa;
     justify-content: center;
     overflow: hidden;
+    z-index: 1;
     /* overflow: hidden;
     position: fixed; */
     display: flex;

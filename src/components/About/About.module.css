@@ -242,6 +242,10 @@
     justify-content: center;
 }
 
+.a_c_a:hover {
+    background: #575757;
+}
+
 .a_c_a {
     width: 40%;
     height: 50px;

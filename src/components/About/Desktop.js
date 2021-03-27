@@ -15,7 +15,7 @@ export default class About extends Component {
         {
           id: 1,
           src: analysis,
-          title: "Trend Analysis",
+          title: "Styled Components",
           text:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscenec lectus vel magna vehicula hendrerit. Mauris commodo, semnon mollis dictum, libero dolor molestie enim, in molestieeros diam id neque.",
           button: "More Details",
@@ -32,7 +32,7 @@ export default class About extends Component {
         {
           id: 3,
           src: emails,
-          title: "Email Design",
+          title: "Responsive Design",
           text:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscenec lectus vel magna vehicula hendrerit. Mauris commodo, semnon mollis dictum, libero dolor molestie enim, in molestieeros diam id neque.",
           button: "More Details",
