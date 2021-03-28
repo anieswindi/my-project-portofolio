@@ -59,8 +59,8 @@ export default class Home extends Component {
     const AutoplaySlider = withAutoplay(AwesomeSlider);
     const data_slide = this.state.data_slide.map((el) => {
       return (
-        <div className="flex_row">
-          <div className="row_1">
+        <div className={cs.flex_row}>
+          <div className={cs.row_1}>
             <h1>
               Simple App that we <em>CREATE</em>
             </h1>
@@ -71,7 +71,7 @@ export default class Home extends Component {
               Nam maximus ex diam, nec consectetur diam.
             </p>
 
-            <button className="buttonUs">
+            <button className={cs.buttonUs}>
               <p>Know me better</p>
             </button>
           </div>
@@ -85,8 +85,9 @@ export default class Home extends Component {
         <AutoplaySlider
           animation="cubeAnimation"
           cancelOnInteraction={false} // should stop playing on user interaction
-          interval={6000}
-          className="customClass"
+          //   interval={4000}
+          //   play={true}
+          className={cs.customClass}
         >
           {data_slide}
         </AutoplaySlider>

@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Helmet from "react-helmet";
 import cs from "./About.module.css";
 import { Slide } from "react-awesome-reveal";
-import analysis from "./../../assets/047-growth.png";
-import optimation from "./../../assets/036-tutorial.png";
-import emails from "./../../assets/015-list.png";
+import styled from "./../../assets/web.png";
+import dev from "./../../assets/web-development.png";
+import design from "./../../assets/web-design.png";
 import "react-circular-progressbar/dist/styles.css";
 
 export default class About extends Component {
@@ -14,7 +14,7 @@ export default class About extends Component {
       home_sec_one: [
         {
           id: 1,
-          src: analysis,
+          src: styled,
           title: "Styled Components",
           text:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscenec lectus vel magna vehicula hendrerit. Mauris commodo, semnon mollis dictum, libero dolor molestie enim, in molestieeros diam id neque.",
@@ -22,7 +22,7 @@ export default class About extends Component {
         },
         {
           id: 2,
-          src: optimation,
+          src: dev,
           title: "Site Optimation",
           text:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscenec lectus vel magna vehicula hendrerit. Mauris commodo, semnon mollis dictum, libero dolor molestie enim, in molestieeros diam id neque.",
@@ -31,7 +31,7 @@ export default class About extends Component {
         },
         {
           id: 3,
-          src: emails,
+          src: design,
           title: "Responsive Design",
           text:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscenec lectus vel magna vehicula hendrerit. Mauris commodo, semnon mollis dictum, libero dolor molestie enim, in molestieeros diam id neque.",

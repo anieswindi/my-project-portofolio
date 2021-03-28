@@ -204,6 +204,7 @@ class App2 extends Component {
     let sticky;
     const w = window.screen.width;
     const y = window.scrollY;
+    // console.log("ini y =>", y);
     // const s = window.scro
     if (w <= 1440) {
       if (y >= 1142) {
@@ -212,7 +213,7 @@ class App2 extends Component {
         sticky = "";
       }
     } else {
-      if (y >= 1100) {
+      if (y >= 900.5) {
         sticky = "sticky";
       } else {
         sticky = "";
