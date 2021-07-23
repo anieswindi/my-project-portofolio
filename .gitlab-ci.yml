@@ -1,0 +1,31 @@
+stages:
+   - build
+   - deploy
+
+build digibim-board:  
+   image: node:10.15.0-stretch
+     
+   stage: build  
+   only:    
+      - develop  
+   script:
+      # Set PATH
+      - export PATH=$PATH:/usr/bin/npm    
+      # Install dependencies    
+      - npm install    
+      # Build App    
+      - CI=false npm run build  
+   artifacts:    
+      paths:      
+         # Build folder      
+         - build/    
+      expire_in: 1 hour
+
+deploy prod:
+   image: python:latest
+   stage: deploy
+   only:
+      - develop
+   script:
+      - pip3 install awscli
+      - aws s3 sync ./build s3://digibim-board
