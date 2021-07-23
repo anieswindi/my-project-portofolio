@@ -1,0 +1,182 @@
+#navbar_my_style {
+    background-color: black;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    /* overflow: hidden;
+    position: fixed; */
+    display: flex;
+    height: 10vh;
+    -webkit-animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-top-2 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.a_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.a_center_pic {
+    width: 20%;
+    background: chocolate;
+}
+
+.a {
+    background: chartreuse;
+    width: 30%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 50%;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+.left p {
+    color: black;
+    font-size: 24px !important;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Poppins' !important;
+}
+
+.right {
+    width: 40%;
+    justify-content: flex-end;
+    height: 100%;
+    display: flex;
+}
+
+
+.switch {
+    width: 10%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.switch button {
+    margin: auto;
+    /* height: 100% !important; */
+}
+
+.navItem {
+    justify-content: center;
+    display: flex;
+    margin: auto 1rem;
+}
+
+.navItem span {
+    color: black;
+    font-size: 24px !important;
+    font-family: 'Poppins' !important;
+}
+
+.navItem:hover span {
+    color: #575757;
+}
+
+.halfRight a {
+    text-decoration: none;
+}
+
+.halfRight {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+
+@-webkit-keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-top-2 {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top-2 {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1441px) {
+    .left {
+        width: 20%;
+    }
+
+    .right {
+        width: 60%;
+    }
+
+    .switch {
+        width: 20%;
+    }
+
+    .halfRight {
+        justify-content: space-around;
+    }
+}
