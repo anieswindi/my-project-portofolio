@@ -4,15 +4,15 @@ import Mobile from "./Mobile";
 import { isMobile, isTablet } from "react-device-detect";
 
 export default function H_Section1() {
-  let content;
+	let content;
 
-  if (isTablet) {
-    content = <Desktop />;
-  } else if (isMobile) {
-    content = <Mobile />;
-  } else {
-    content = <Desktop />;
-  }
+	if (isTablet) {
+		content = <Desktop />;
+	} else if (isMobile) {
+		content = <Mobile />;
+	} else {
+		content = <Desktop />;
+	}
 
-  return <>{content}</>;
+	return <>{content}</>;
 }
